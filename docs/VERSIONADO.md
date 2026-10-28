@@ -6,6 +6,16 @@
 
 Ejemplos: `01.00.00`, `01.03.02`, `02.00.00`.
 
+## Regla de etapa (decisión de Andrés, 2026-10-28)
+
+| Primer segmento | Significado |
+|---|---|
+| **00** | **En construcción**: mientras se crea/desarrolla el producto (pre-definitivo). |
+| **01** | **Primer definitivo**: primera versión completa y publicada. |
+| **02, 03…** | Definitivos posteriores con cambios incompatibles (MAJOR). |
+
+La versión actual `01.00.00` es el primer definitivo de Videoteca.
+
 ## Reglas de incremento
 
 | Cambio | Segmento | Ejemplo |
