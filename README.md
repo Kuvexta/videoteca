@@ -1,25 +1,48 @@
-# Videoteca — Portal de capacitación por video (Google Sheets + Apps Script)
+# Videoteca
 
-Proyecto aparte de KUVEXTA. Consolidado por R8 el 27/10/2026.
+**Portal de capacitación por video sobre Google Sheets + Apps Script** — sin servidores propios.
 
-## Mapa
-- `codigo/` → **pareja vigente**: `Codigo.gs` (Código 24) + `Index.html` (Index 9). Se despliega **manualmente** en el editor de Apps Script (sin clasp; checklist en `../entregas/R7/manuales/Manual_completo.md` cap. 4).
-- `entregas/` → R1 · R5 · R6 · R7 (manuales, actas de cierre, cambios).
-- `paquetes/` → zips de entrega + sus sha256.
-- `historico/instantaneas_codigo/` → las 30 instantáneas acumulativas previas (C01-C23, I01-I08) (historial, NO usar).
-- `historico/trabajo_manual_piloto/` → área de trabajo del piloto (archivada tras R7).
-- `pruebas/` → arnés local (321 pruebas simuladas) + verificadores .cjs.
-- `documentos/` → pendientes, revisiones, validaciones, informes, términos de privacidad.
-- `instalacion/` → instalaciones de producción, respaldos, inventarios.
-- `sitio-legal/` → sitio web legal del proyecto.
-- `recursos/` → iconos, instrucciones del módulo IA, scripts auxiliares.
-- `backups/` → serie semanal de respaldo de la hoja (unificada).
+- **Versión:** 01.00.00 (ver `CHANGELOG.md` y `docs/VERSIONADO.md`)
+- **Estado:** pública para la comunidad — primera versión
+- **Despliegue:** manual en el editor de Apps Script (sin clasp)
 
-## Reglas
-- Los **datos de participantes viven SOLO en la hoja de Google Sheets (Drive)** — nunca en un repositorio.
-- Política de privacidad: certificados, tiempos e informes exigen carpetas privadas de Drive.
-- `%SystemDrive%` (artefacto de bug) quedó en `PARA_ELIMINAR_20261027\_CUARENTENA_KUVEXTA_20261027\`.
+## Qué es
 
-## Pendiente de decisión
-- Repositorio git para el historial de versiones (se propuso; falta la ruta del repo KUVEXTA).
-- Cáscaras vacías tras la consolidación: `Base de Conocimiento/` y `BD-VIDEOTECA/` (decisión de Andrés).
+Videoteca permite cargar catálogos de videos por enlace, organizarlos en módulos de capacitación, generar evaluaciones y certificados, y administrar accesos por rol (admin / supervisor / participante). Los datos de participantes viven **solo en la hoja de Google Sheets del propietario**.
+
+## Instalación
+
+Sigue **`MANUAL_INSTALACION.md`** (10 pasos, desde cero hasta respaldo y aceptación). Resumen:
+1. Cuenta de Google dedicada + carpeta privada de Drive + libro de Sheets vacío.
+2. Pega `codigo/Codigo.gs` en el archivo Código y `codigo/Index.html` en un HTML llamado `Index`.
+3. Habilita YouTube Data API v3; V8 y zona horaria America/Bogota.
+4. Ejecuta `onOpen`, configura la carpeta raíz y ejecuta `inicializarSistemaCompleto`.
+5. Publica como Aplicación web (ejecutada como el propietario) y usa la URL `/exec`.
+
+## Estructura
+
+| Carpeta | Contenido |
+|---|---|
+| `codigo/` | Pareja vigente: `Codigo.gs` (Código 24) + `Index.html` (Index 9) |
+| `documentos/` | Pendientes, revisiones, validaciones, informes, términos de privacidad |
+| `entregas/` | R1 · R5 · R6 · R7 (manuales completos, actas de cierre, cambios) |
+| `paquetes/` | Zips de entrega con sus SHA-256 |
+| `historico/instantaneas_codigo/` | Instantáneas acumulativas previas (C01–C23, I01–I08) — histórico, no usar |
+| `instalacion/` | Instalaciones de producción, respaldos, inventarios |
+| `pruebas/` | Arnés local (321 pruebas simuladas) y verificadores |
+| `recursos/` | Iconos, instrucciones del módulo IA, scripts auxiliares |
+| `sitio-legal/` | Sitio web legal del proyecto |
+
+## Versionado
+
+`MM.mm.pp` — Mayor.menor.parche, sin año en el número (la fecha vive en el changelog y en los tags). Detalle en `docs/VERSIONADO.md`.
+
+## Datos y privacidad
+
+- Los **datos de participantes viven SOLO en la hoja de Google Sheets (Drive)** — nunca en este repositorio.
+- Certificados, tiempos e informes exigen carpetas privadas de Drive.
+- Las claves de acceso son secretos (gestor de contraseñas), nunca en código.
+
+## Licencia
+
+Por definir por el propietario (se recomienda MIT para una comunidad pública).
