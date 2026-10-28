@@ -2,6 +2,11 @@
 
 El formato de versión es `MM.mm.pp` (Mayor.menor.parche). Ver `docs/VERSIONADO.md`.
 
+## Nota organizativa — 2026-10-28
+
+- Repositorio trasladado de la cuenta personal `kuvextagroup` a la **organización Kuvexta** (`github.com/Kuvexta/videoteca`).
+- Motivo: centralizar el ecosistema de repositorios del grupo bajo un propietario institucional (equipos, permisos, credenciales y continuidad). La URL anterior conserva redirección automática.
+
 ## 01.00.00 — 2026-10-28 — Versión inicial pública
 
 - Primera versión entregada a la comunidad.

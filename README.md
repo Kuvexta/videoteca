@@ -46,3 +46,9 @@ Sigue **`MANUAL_INSTALACION.md`** (10 pasos, desde cero hasta respaldo y aceptac
 ## Licencia
 
 **MIT** © 2026 Kuvexta — ver `LICENSE`. Uso libre para la comunidad.
+
+## Organización del repositorio
+
+Este repositorio vive bajo la **organización Kuvexta** (`github.com/Kuvexta/videoteca`), no en la cuenta personal `kuvextagroup`.
+
+**Motivo:** centralizar todo el ecosistema de repositorios del grupo (odoo-*, facturalatam-*, webkul-*, kuvexta-*) bajo un único propietario institucional; facilita equipos, permisos, credenciales y continuidad si cambia el responsable de la cuenta. La URL anterior (`kuvextagroup/videoteca`) queda con redirección automática de GitHub.
