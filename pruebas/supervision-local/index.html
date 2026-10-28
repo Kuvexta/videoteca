@@ -1,0 +1,39 @@
+<!doctype html><meta charset="utf-8"><title>Prueba local de supervisión</title><style>body{font:16px system-ui;margin:32px;max-width:1000px}table{border-collapse:collapse;width:100%}td,th{padding:14px;text-align:left;border-bottom:1px solid #ddd}input,button{font:inherit;padding:10px;margin:8px}.mut{color:#555}</style><p>PRUEBA LOCAL — DATOS FICTICIOS</p><section id="vista"></section><script>
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function cargandoHTML(t){return esc(t)}function avisoHTML(t,h,s){return esc(h+' '+s)}
+async function api(a,d){const rows=[{fecha:'2026-09-12',estudiante:'Participante A',correo:'a@example.test',evaluacion:'Evaluación de ejemplo',porcentaje:75,estado:'Aprobado'},{fecha:'2026-09-12',estudiante:'<img src=x onerror=alert(1)>',correo:'b@example.test',evaluacion:'Prueba de texto seguro',porcentaje:90,estado:'Aprobado'}].filter(r=>!d.correo||r.correo===d.correo);return {registros:rows,total:rows.length,pagina:1,paginas:1}}
+async function verSupervision(el) {
+  el.innerHTML = '<div class="vista-cab"><h1>Resultados de participantes</h1></div>' +
+    '<p class="mut">Consulta de calificaciones registradas, sin administración ni edición.</p>' +
+    '<form id="sup-filtro"><label for="sup-correo">Correo (vacío para ver todos)</label>' +
+    '<input id="sup-correo" type="email" autocomplete="off"><button class="btn" type="submit">Consultar</button></form>' +
+    '<div id="sup-resultados" aria-live="polite"></div>';
+  const contenido = document.getElementById("sup-resultados");
+  let consulta = 0;
+  async function cargar(pagina) {
+    const turno = ++consulta;
+    contenido.innerHTML = cargandoHTML("Consultando resultados…");
+    try {
+      const r = await api("supervision_resultados", {correo: document.getElementById("sup-correo").value.trim(), pagina: pagina}, {callar: true});
+      if (turno !== consulta || !el.contains(contenido)) return;
+      contenido.innerHTML = '<p>' + esc(String(r.total)) + ' resultados registrados.</p>' +
+        (r.registros.length ? '<div style="overflow-x:auto"><table><thead><tr><th>Fecha</th><th>Participante</th><th>Evaluación</th><th>Nota</th><th>Estado</th></tr></thead><tbody>' +
+        r.registros.map(function(f) { return '<tr><td>' + esc(f.fecha) + '</td><td>' + esc(f.estudiante) + '<br>' + esc(f.correo) +
+          '</td><td>' + esc(f.evaluacion) + '</td><td>' + (f.porcentaje === null ? 'Sin nota' : esc(String(f.porcentaje)) + '%') + '</td><td>' + esc(f.estado) + '</td></tr>'; }).join('') +
+        '</tbody></table></div>' : '<p>No hay resultados para esta consulta.</p>') +
+        '<p>Página ' + esc(String(r.pagina)) + ' de ' + esc(String(r.paginas)) + '</p>' +
+        '<button class="btn sec" id="sup-anterior" type="button">Anterior</button> <button class="btn sec" id="sup-siguiente" type="button">Siguiente</button>';
+      const anterior = document.getElementById("sup-anterior"), siguiente = document.getElementById("sup-siguiente");
+      anterior.disabled = r.pagina <= 1; siguiente.disabled = r.pagina >= r.paginas;
+      anterior.onclick = function() { cargar(r.pagina - 1); };
+      siguiente.onclick = function() { cargar(r.pagina + 1); };
+    } catch(e) {
+      if (turno === consulta) contenido.innerHTML = avisoHTML("crit", "No se pudieron consultar los resultados", e.message);
+    }
+  }
+  document.getElementById("sup-filtro").onsubmit = function(e) { e.preventDefault(); cargar(1); };
+  await cargar(1);
+}
+
+
+verSupervision(document.getElementById('vista'));</script>

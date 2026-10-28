@@ -1,0 +1,26 @@
+OK Clave oculta y recordar desactivado inicialmente
+OK Viewport móvil sin bloquear zoom
+OK Parámetros mal codificados no rompen navegación
+OK Valores con igual se conservan y claves peligrosas se ignoran
+OK Búsqueda inicial sin IA y modo semántico persiste en enlace
+OK Supervisor solo recibe su enlace de resultados en menú personal
+OK Administrador conserva todos sus enlaces
+OK Una sola vigilancia de caducidad tras renovar
+OK Cierre purga examen favoritos vistas y temporizadores
+OK Respuesta de sesión anterior no expone datos a la nueva
+OK Un 401 tardío no expulsa a la sesión nueva
+OK Timeout advierte resultado incierto sin recomendar repetir escritura
+OK Logout cierra local inmediatamente y reconoce fallo remoto
+OK Logout confirmado no exige mantener la sesión local
+OK Logout tardío no tapa el acceso de otra persona
+OK Catálogo elige ruta palabras
+OK Catálogo elige ruta semantica
+OK Notas diferidas pertenecen a su sesión y cancelan su temporizador
+18 pruebas de interfaz aprobadas; navegador y servidor simulados.
+OK Fila de ejemplo usa 32 columnas sin inventar duración o métricas
+OK Cancelar ejemplo no modifica el libro
+OK URL inválida no inserta fila
+OK Indicador Twitch exige las dos credenciales almacenadas
+OK Etiqueta de prompts no promete una llamada al proveedor
+OK Renovación distingue vigencia y rotación
+6 pruebas del panel y fila de ensayo aprobadas; servicios simulados.

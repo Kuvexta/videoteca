@@ -1,0 +1,40 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Revisión R5 Videoteca</title><style>body{font:17px/1.6 system-ui;max-width:960px;margin:35px auto;padding:20px}pre{font:inherit;white-space:pre-wrap;overflow-wrap:anywhere}</style><pre># Revisión R5 del catálogo y las métricas
+
+Fecha: 16 de septiembre de 2026. Pareja actual: Código 22 e Index 7. Revisión local v2026.6.37-VIDEOTECA-PILOTO-R5; no publicada en Google. Este complemento actualiza las referencias de archivos de los capítulos 1 y 23 del manual base R4. Sus demás instrucciones continúan aplicando.
+
+## Dos defectos confirmados y corregidos
+
+El alta append de doPost escribía YouTube o Vimeo en Ecosistema. Ahora escribe la plataforma en Fuente y deja Ecosistema y Área en Sin clasificar para el procesamiento posterior. La respuesta de la API mantiene plataforma y la toma de Fuente. Se conservan los requisitos de permisos, el límite de peticiones, el ID y las 32 columnas.
+
+El contador de registrarVisualizacionVideo comparaba con cero un objeto retornado por buscarFilaCatalogoPorId. Esa rama no ejecutaba el incremento. Sin embargo, usar numeroFila y sumar uno no es la corrección apropiada: IDX.VISTAS contiene métricas externas y actualizarSoloMetricas las reemplaza con las del proveedor. Mezclar aperturas internas con vistas externas produciría un valor ambiguo.
+
+Se retiró ese incremento inoperante. La función mantiene el registro de cada apertura en _Historial_Visualizaciones, con fecha, identidad, video, título y origen portal; el panel de actividad ya utiliza ese historial. Una apertura no demuestra reproducción completa. No se añadió otra columna ni se alteraron métricas reales.
+
+## Observaciones que no demuestran un defecto
+
+Los scriptlets &lt;?= ?&gt; de Apps Script realizan escape contextual, incluido dentro de JavaScript. No se puede concluir que convierten necesariamente el crédito a entidades HTML visibles. La documentación oficial lo explica en https://developers.google.com/apps-script/guides/html/templates . Por ese motivo se conservó el escape existente: no se introdujo salida sin escapar. Una prueba del crédito con &amp;, comillas y caracteres especiales en la plantilla evaluada sigue siendo una comprobación útil en Google; no se realizó aquí.
+
+agregarVideoPortal ya usa finally. descargarInformePDF restablece el botón tanto en éxito como en error. enviarSugerencia retira el botón en éxito y lo restaura en rechazo o error. Unificar esos patrones puede mejorar estilo, pero la revisión no demuestra un botón atascado. No se cambió el HTML por ese motivo.
+
+El inicio prueba TOKEN_URL primero y retorna. Solo cuando no hay token en el enlace intenta restaurarSesion. Por tanto, esas dos ramas no duplican cargarMarca en un mismo inicio normal. La renovación posterior sí puede volver a solicitar la marca; no equivale al doble arranque descrito.
+
+Ocultar el botón móvil mediante display:none normalmente también lo excluye del árbol de accesibilidad. La observación sobre aria-controls no acredita un fallo por sí sola. No se verificó con un lector de pantalla real en esta revisión.
+
+Los tamaños de lote y los límites de ejecución pueden corresponder a fases distintas. No se modificaron basándose únicamente en la comparación de constantes. Tampoco se cambió el tratamiento de informes forenses o ventanas de filas sin una prueba reproducible de defecto.
+
+Las valoraciones generales del texto sobre seguridad o manejo impecable de errores no sustituyen una auditoría. Continúan los límites de R4: HMAC no cifra, la lista blanca no protege automáticamente todas las funciones públicas, los 5xx pueden acumular fallos y llegar a DLQ, y las respuestas sin confirmar pueden perderse al cerrar el navegador.
+
+## Actualización y comprobación del grupo
+
+1. Conserve respaldo y versión anterior. Use instalacion/Codigo.gs de este paquete (Código 22) e instalacion/Index.html (Index 7, idéntico al de R4).
+2. Actualice la misma implementación, siguiendo el capítulo 23 del manual base. No cree otra URL OAuth ni regenere claves por esta revisión.
+3. En una copia de ensayo, dé de alta un enlace de YouTube y otro de Vimeo mediante append con un acceso autorizado. Compruebe Fuente, Ecosistema, Área y la plataforma de respuesta.
+4. Abra un video desde el portal y compruebe el nuevo registro del historial. La cifra externa de vistas debe permanecer intacta.
+5. Procese la clasificación según las instrucciones del manual. Esta corrección beneficia altas nuevas; no repara automáticamente filas antiguas contaminadas. Identifique y respalde esas filas antes de una corrección selectiva.
+
+## Evidencia
+
+Se ejecutaron sobre Código 22 e Index 7 las 122 comprobaciones anteriores y siete nuevas: 129 aprobadas. Las nuevas cubren YouTube, Vimeo, plataforma desconocida, permisos, límite de peticiones, historial sin modificación de métricas y error de escritura. Se validó la sintaxis del servidor. Son pruebas con servicios simulados, sin cambios de datos, envíos ni despliegues reales. El detalle está en validacion/pruebas_R5_completas.txt.
+
+El manual Word/HTML base sigue siendo la edición R4 de 26 páginas. Este complemento R5 forma parte de la documentación vigente. La referencia técnica de funciones y las fuentes con números de línea sí se regeneraron desde Código 22 e Index 7. La copia de Google Docs no se modificó.
+</pre></html>

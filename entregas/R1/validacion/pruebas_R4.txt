@@ -1,0 +1,16 @@
+OK Números completos finitos; rechaza sufijos, infinitos y objetos
+OK Reserva excluye consumidor simultáneo y libera lock corto
+OK Liberación ajena no borra reserva y la propia sí
+OK Reserva caducada permite recuperar consumidor
+OK Marca antes del efecto y confirma cada fila antes de la siguiente
+OK No repite completadas ni interrumpidas EN_PROCESO
+OK Consumidor ocupado no ejecuta tareas
+OK Dos respuestas viajan en orden y la primera no confirma la segunda
+OK exito false no se presenta como guardado y bloquea nuevos avances
+OK Respuesta tardía no altera otra sesión
+OK Guardado tardío rechaza intento entregado y libera lock
+OK Guardado ajeno se rechaza sin dejar bloqueo tomado
+OK Error de tarea se confirma pendiente con retroceso
+OK Purga no mueve filas de consumidor activo
+OK Fallo de red conserva respuesta local para entrega
+15 pruebas R4 aprobadas. Sintaxis completa válida.

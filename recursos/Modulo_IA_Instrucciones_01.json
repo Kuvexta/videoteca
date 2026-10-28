@@ -1,0 +1,199 @@
+{
+  "modulo": {
+    "id": "ia_instrucciones_claras_01",
+    "nombre": "IA práctica: de una idea a instrucciones claras",
+    "descripcion": "Primer módulo de herramientas digitales e inteligencia artificial. Aprende a definir una tarea, aclarar dudas, distinguir hechos de promesas y mejorar instrucciones. Material de estudio disponible; evaluación en revisión. No requiere comprar herramientas ni activar modos de ejecución sin restricciones.",
+    "rol": "Participantes de Kuvexta, uso personal y familiar adulto",
+    "totalPreguntas": 8,
+    "umbralVisualizacion": 80,
+    "permitirBlancos": true,
+    "maxIntentos": 3,
+    "estado": "ACTIVO"
+  },
+  "fuente": {
+    "identificador": "Video 1",
+    "videoId": "60yoGZZHZzI",
+    "esPrimaria": true,
+    "tema": "Diseño e iteración de instrucciones para IA",
+    "alcance": "00:00-17:35",
+    "preguntas": 8
+  },
+  "preguntas": [
+    {
+      "pregunta": "¿Qué secuencia se propone para convertir una idea en un prompt útil?",
+      "opciones": [
+        "Elegir una herramienta y aceptar su primera respuesta",
+        "Explicar la idea, organizarla, resolver dudas, probar y corregir",
+        "Memorizar una plantilla y no modificarla",
+        "Pedir el resultado final sin aportar contexto"
+      ],
+      "correcta": 1,
+      "video_segundo": 46,
+      "area": "Iteración",
+      "justificacion": "El proceso empieza con la idea y usa preguntas, prueba y corrección; no depende de acertar a la primera.",
+      "tipo": "multiple",
+      "fuente": "Video 1",
+      "video_id": "60yoGZZHZzI",
+      "es_trampa_ia": false,
+      "configuracion_correcta": "Explicar la idea, organizarla, resolver dudas, probar y corregir",
+      "causa_raiz": "No aplicar el paso del método indicado en la explicación.",
+      "riesgo_operativo": "Obtener o utilizar una respuesta que no satisface la tarea.",
+      "severidad_riesgo": "BAJO",
+      "peso_puntos": 1
+    },
+    {
+      "pregunta": "Quieres una aplicación para organizar tareas. ¿Qué información conviene definir al empezar?",
+      "opciones": [
+        "Solo el color de los botones",
+        "El número de seguidores del creador",
+        "Problema, usuarios y funciones necesarias",
+        "La marca del ordenador"
+      ],
+      "correcta": 2,
+      "video_segundo": 116,
+      "area": "Definición del problema",
+      "justificacion": "La plantilla inicial concreta el problema, el usuario y las funciones antes de diseñar la solución.",
+      "tipo": "multiple",
+      "fuente": "Video 1",
+      "video_id": "60yoGZZHZzI",
+      "es_trampa_ia": false,
+      "configuracion_correcta": "Problema, usuarios y funciones necesarias",
+      "causa_raiz": "No aplicar el paso del método indicado en la explicación.",
+      "riesgo_operativo": "Obtener o utilizar una respuesta que no satisface la tarea.",
+      "severidad_riesgo": "BAJO",
+      "peso_puntos": 1
+    },
+    {
+      "pregunta": "Todavía no sabes si necesitas una aplicación o una hoja de cálculo. ¿Qué instrucción encaja con el método?",
+      "opciones": [
+        "Pedir que compare opciones y aclare la necesidad antes de programar",
+        "Elegir siempre una aplicación móvil",
+        "Autorizar que programe sin más preguntas",
+        "Exigir que use una tecnología al azar"
+      ],
+      "correcta": 0,
+      "video_segundo": 134,
+      "area": "Elección de herramienta",
+      "justificacion": "Primero se define el tipo de solución; programar antes puede producir una herramienta inadecuada.",
+      "tipo": "multiple",
+      "fuente": "Video 1",
+      "video_id": "60yoGZZHZzI",
+      "es_trampa_ia": false,
+      "configuracion_correcta": "Pedir que compare opciones y aclare la necesidad antes de programar",
+      "causa_raiz": "No aplicar el paso del método indicado en la explicación.",
+      "riesgo_operativo": "Obtener o utilizar una respuesta que no satisface la tarea.",
+      "severidad_riesgo": "BAJO",
+      "peso_puntos": 1
+    },
+    {
+      "pregunta": "En la fase de diseñar el prompt, la IA empieza a crear archivos. ¿Qué límite faltó aclarar?",
+      "opciones": [
+        "Que responda con más entusiasmo",
+        "Que utilice muchos colores",
+        "Que omita las preguntas",
+        "Que su tarea en esa fase es redactar instrucciones, no construir la herramienta"
+      ],
+      "correcta": 3,
+      "video_segundo": 103,
+      "area": "Alcance de la tarea",
+      "justificacion": "El ejemplo separa el diseño del prompt de la ejecución y construcción de la herramienta.",
+      "tipo": "multiple",
+      "fuente": "Video 1",
+      "video_id": "60yoGZZHZzI",
+      "es_trampa_ia": false,
+      "configuracion_correcta": "Que su tarea en esa fase es redactar instrucciones, no construir la herramienta",
+      "causa_raiz": "No aplicar el paso del método indicado en la explicación.",
+      "riesgo_operativo": "Obtener o utilizar una respuesta que no satisface la tarea.",
+      "severidad_riesgo": "BAJO",
+      "peso_puntos": 1
+    },
+    {
+      "pregunta": "Al pedir una investigación sobre una herramienta de IA, ¿qué distinción debes solicitar?",
+      "opciones": [
+        "Separar hechos comprobables de opiniones, promesas y limitaciones",
+        "Tratar todas las promesas comerciales como hechos",
+        "Elegir únicamente testimonios favorables",
+        "Omitir las dudas para que el informe sea breve"
+      ],
+      "correcta": 0,
+      "video_segundo": 447,
+      "area": "Verificación",
+      "justificacion": "El objetivo es distinguir evidencia, interpretaciones, riesgos y aspectos pendientes de verificar.",
+      "tipo": "multiple",
+      "fuente": "Video 1",
+      "video_id": "60yoGZZHZzI",
+      "es_trampa_ia": false,
+      "configuracion_correcta": "Separar hechos comprobables de opiniones, promesas y limitaciones",
+      "causa_raiz": "No aplicar el paso del método indicado en la explicación.",
+      "riesgo_operativo": "Obtener o utilizar una respuesta que no satisface la tarea.",
+      "severidad_riesgo": "BAJO",
+      "peso_puntos": 1
+    },
+    {
+      "pregunta": "Una cifra de la investigación no puede confirmarse. ¿Cómo debe tratarse?",
+      "opciones": [
+        "Redondearla hasta que parezca razonable",
+        "Inventar una fuente similar",
+        "Marcarla como pendiente de verificación",
+        "Presentarla como dato confirmado"
+      ],
+      "correcta": 2,
+      "video_segundo": 490,
+      "area": "Verificación",
+      "justificacion": "La plantilla prohíbe inventar datos y fuentes y exige señalar lo que no se puede confirmar.",
+      "tipo": "multiple",
+      "fuente": "Video 1",
+      "video_id": "60yoGZZHZzI",
+      "es_trampa_ia": false,
+      "configuracion_correcta": "Marcarla como pendiente de verificación",
+      "causa_raiz": "No aplicar el paso del método indicado en la explicación.",
+      "riesgo_operativo": "Obtener o utilizar una respuesta que no satisface la tarea.",
+      "severidad_riesgo": "BAJO",
+      "peso_puntos": 1
+    },
+    {
+      "pregunta": "¿Qué debe incluir la configuración de un asistente personalizado?",
+      "opciones": [
+        "Solo un nombre llamativo",
+        "Únicamente una lista de herramientas",
+        "Una orden de aceptar cualquier resultado",
+        "Su función, usuarios, contexto, estilo y comportamientos que debe evitar"
+      ],
+      "correcta": 3,
+      "video_segundo": 694,
+      "area": "Instrucciones del asistente",
+      "justificacion": "La configuración define cómo se comporta el asistente y qué contexto necesita para responder.",
+      "tipo": "multiple",
+      "fuente": "Video 1",
+      "video_id": "60yoGZZHZzI",
+      "es_trampa_ia": false,
+      "configuracion_correcta": "Su función, usuarios, contexto, estilo y comportamientos que debe evitar",
+      "causa_raiz": "No aplicar el paso del método indicado en la explicación.",
+      "riesgo_operativo": "Obtener o utilizar una respuesta que no satisface la tarea.",
+      "severidad_riesgo": "BAJO",
+      "peso_puntos": 1
+    },
+    {
+      "pregunta": "Probaste el prompt y la respuesta no resuelve tu necesidad. ¿Cuál es el siguiente paso?",
+      "opciones": [
+        "Publicar la respuesta para terminar rápido",
+        "Revisar lo que falta, corregir las instrucciones y probar otra vez",
+        "Cambiar de cuenta sin revisar las instrucciones",
+        "Aceptar que cualquier respuesta de la IA es válida"
+      ],
+      "correcta": 1,
+      "video_segundo": 992,
+      "area": "Iteración",
+      "justificacion": "La conclusión del video propone un ciclo de prueba, corrección y mejora de una estructura clara.",
+      "tipo": "multiple",
+      "fuente": "Video 1",
+      "video_id": "60yoGZZHZzI",
+      "es_trampa_ia": false,
+      "configuracion_correcta": "Revisar lo que falta, corregir las instrucciones y probar otra vez",
+      "causa_raiz": "No aplicar el paso del método indicado en la explicación.",
+      "riesgo_operativo": "Obtener o utilizar una respuesta que no satisface la tarea.",
+      "severidad_riesgo": "BAJO",
+      "peso_puntos": 1
+    }
+  ]
+}

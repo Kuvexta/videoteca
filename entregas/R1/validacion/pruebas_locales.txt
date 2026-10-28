@@ -1,0 +1,101 @@
+verificar_certificados_privados.cjs — salida 0
+OK Destino privado emite PDF y adjunto sin publicación
+OK root publica bloquea antes de copiar datos
+OK certs publica bloquea antes de copiar datos
+OK root dominio bloquea antes de copiar datos
+OK certs dominio bloquea antes de copiar datos
+OK root editor bloquea antes de copiar datos
+OK certs editor bloquea antes de copiar datos
+OK root lector bloquea antes de copiar datos
+OK certs lector bloquea antes de copiar datos
+OK root sinPropietario bloquea antes de copiar datos
+OK certs sinPropietario bloquea antes de copiar datos
+OK root otroPropietario bloquea antes de copiar datos
+OK certs otroPropietario bloquea antes de copiar datos
+OK root falloPermisos bloquea antes de copiar datos
+OK certs falloPermisos bloquea antes de copiar datos
+OK Identidad no disponible bloquea emisión
+OK Sin plantilla mantiene emisión desactivada
+17 pruebas de privacidad aprobadas; Drive y correo simulados, sin envíos reales.
+
+
+verificar_supervision.cjs — salida 0
+OK Supervisor obtiene 50 de 120 resultados sin enlaces ni identificadores internos
+OK Filtra correo normalizado
+OK Última página limita rango
+OK read_only no lee resultados globales
+OK exam no lee resultados globales
+OK append no lee resultados globales
+OK invalido no lee resultados globales
+OK Admin conserva acceso global
+OK Supervisor bloqueado en panel_admin
+OK Supervisor bloqueado en marca_set
+OK Supervisor bloqueado en agregar_video
+OK Supervisor bloqueado en incidencia_cerrar
+OK Supervisor bloqueado en intento_iniciar
+OK Supervisor bloqueado en intento_guardar
+OK Supervisor bloqueado en save_progress
+OK Supervisor bloqueado en preferences_set
+OK Supervisor bloqueado en informe_pdf
+OK Supervisor bloqueado en stats
+OK Todas las rutas salvo acceso y supervisión quedan bloqueadas
+OK Canje mantiene scope supervisor sin elevarlo
+OK Jerarquía anterior sin cambios
+OK Número de rutas frontend coincide
+22 pruebas correctas. Autorización y rutas reales; almacenamiento ficticio.
+
+
+verificar_permisos_resultados.cjs — salida 0
+OK Participante consulta informe propio sin anexo forense
+OK Participante no consulta informe ajeno
+OK Correo y scope falsificados no cambian identidad
+OK Administrador consulta informe ajeno entregado
+OK a no obtiene solucionario de examen abierto
+OK admin no obtiene solucionario de examen abierto
+OK PDF ajeno bloqueado antes de generar archivo
+OK PDF propio permitido
+OK Calificaciones solo contienen las propias
+OK Consulta directa de notas ajenas bloqueada antes de leer hoja
+OK Admin puede seleccionar correo en función de calificaciones
+OK Estado del módulo ignora correo declarado
+OK Participante bloqueado en stats
+OK Participante bloqueado en panel_admin
+OK Participante bloqueado en actividad
+OK Participante bloqueado en informe_auditoria
+OK Sin token no obtiene resultados
+OK No existe scope supervisor en jerarquía actual
+18 pruebas correctas; datos ficticios y servicios simulados. No se verifica sesión real ni permisos Drive.
+
+
+verificar_tiktok_redirect.cjs — salida 0
+OK Sintaxis del servidor completo
+OK La autorización lleva la URL configurada
+OK Sin propiedad no genera autorización
+OK Rechaza URL inválida LDQ/exec?x=1
+OK Rechaza URL inválida rtw4LLDQ/dev
+OK Rechaza URL inválida ple.com/exec
+OK Rechaza URL inválida Q/exec texto
+OK El canje conserva la URL aunque cambie la propiedad
+OK El canje conserva la URL aunque se borre la propiedad
+OK Estado erróneo no llama a TikTok
+OK Estado caducado no llama a TikTok
+OK No acepta autorización antigua sin contexto
+OK No reutiliza estado después del canje
+OK Cambio de Client Key exige nueva autorización
+OK Contexto ilegible no llama a TikTok
+15 pruebas correctas; servicios simulados, sin llamadas a Google o TikTok.
+
+
+verificar_tiktok_diagnostico.cjs — salida 0
+OK Respuesta vacía válida no acusa propiedad
+OK HTTP401 conserva catálogo y declara fallo
+OK HTTP500 conserva catálogo y declara fallo
+OK error HTTP200 conserva catálogo y declara fallo
+OK JSON roto conserva catálogo y declara fallo
+OK sin videos conserva catálogo y declara fallo
+OK Sin token no consulta ni altera
+OK Cuota agotada no acusa propiedad
+OK Resultado parcial preserva datos válidos
+OK Actualiza solo filas devueltas
+OK Indicador exige ambas credenciales
+11 pruebas correctas. Servicios simulados.

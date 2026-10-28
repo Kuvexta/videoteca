@@ -1,0 +1,156 @@
+verificar_certificados_privados.cjs
+OK Destino privado emite PDF y adjunto sin publicación
+OK root publica bloquea antes de copiar datos
+OK certs publica bloquea antes de copiar datos
+OK root dominio bloquea antes de copiar datos
+OK certs dominio bloquea antes de copiar datos
+OK root editor bloquea antes de copiar datos
+OK certs editor bloquea antes de copiar datos
+OK root lector bloquea antes de copiar datos
+OK certs lector bloquea antes de copiar datos
+OK root sinPropietario bloquea antes de copiar datos
+OK certs sinPropietario bloquea antes de copiar datos
+OK root otroPropietario bloquea antes de copiar datos
+OK certs otroPropietario bloquea antes de copiar datos
+OK root falloPermisos bloquea antes de copiar datos
+OK certs falloPermisos bloquea antes de copiar datos
+OK Identidad no disponible bloquea emisión
+OK Sin plantilla mantiene emisión desactivada
+17 pruebas de privacidad aprobadas; Drive y correo simulados, sin envíos reales.
+
+verificar_supervision.cjs
+OK Supervisor obtiene 50 de 120 resultados sin enlaces ni identificadores internos
+OK Filtra correo normalizado
+OK Última página limita rango
+OK read_only no lee resultados globales
+OK exam no lee resultados globales
+OK append no lee resultados globales
+OK invalido no lee resultados globales
+OK Admin conserva acceso global
+OK Supervisor bloqueado en panel_admin
+OK Supervisor bloqueado en marca_set
+OK Supervisor bloqueado en agregar_video
+OK Supervisor bloqueado en incidencia_cerrar
+OK Supervisor bloqueado en intento_iniciar
+OK Supervisor bloqueado en intento_guardar
+OK Supervisor bloqueado en save_progress
+OK Supervisor bloqueado en preferences_set
+OK Supervisor bloqueado en informe_pdf
+OK Supervisor bloqueado en stats
+OK Todas las rutas salvo acceso y supervisión quedan bloqueadas
+OK Canje mantiene scope supervisor sin elevarlo
+OK Jerarquía anterior sin cambios
+OK Número de rutas frontend coincide
+22 pruebas correctas. Autorización y rutas reales; almacenamiento ficticio.
+
+verificar_permisos_resultados.cjs
+OK Participante consulta informe propio sin anexo forense
+OK Participante no consulta informe ajeno
+OK Correo y scope falsificados no cambian identidad
+OK Administrador consulta informe ajeno entregado
+OK a no obtiene solucionario de examen abierto
+OK admin no obtiene solucionario de examen abierto
+OK PDF ajeno bloqueado antes de generar archivo
+OK PDF propio permitido
+OK Calificaciones solo contienen las propias
+OK Consulta directa de notas ajenas bloqueada antes de leer hoja
+OK Admin puede seleccionar correo en función de calificaciones
+OK Estado del módulo ignora correo declarado
+OK Participante bloqueado en stats
+OK Participante bloqueado en panel_admin
+OK Participante bloqueado en actividad
+OK Participante bloqueado en informe_auditoria
+OK Sin token no obtiene resultados
+OK No existe scope supervisor en jerarquía actual
+18 pruebas correctas; datos ficticios y servicios simulados. No se verifica sesión real ni permisos Drive.
+
+verificar_tiktok_redirect.cjs
+OK Sintaxis del servidor completo
+OK La autorización lleva la URL configurada
+OK Sin propiedad no genera autorización
+OK Rechaza URL inválida LDQ/exec?x=1
+OK Rechaza URL inválida rtw4LLDQ/dev
+OK Rechaza URL inválida ple.com/exec
+OK Rechaza URL inválida Q/exec texto
+OK El canje conserva la URL aunque cambie la propiedad
+OK El canje conserva la URL aunque se borre la propiedad
+OK Estado erróneo no llama a TikTok
+OK Estado caducado no llama a TikTok
+OK No acepta autorización antigua sin contexto
+OK No reutiliza estado después del canje
+OK Cambio de Client Key exige nueva autorización
+OK Contexto ilegible no llama a TikTok
+15 pruebas correctas; servicios simulados, sin llamadas a Google o TikTok.
+
+verificar_tiktok_diagnostico.cjs
+OK Respuesta vacía válida no acusa propiedad
+OK HTTP401 conserva catálogo y declara fallo
+OK HTTP500 conserva catálogo y declara fallo
+OK error HTTP200 conserva catálogo y declara fallo
+OK JSON roto conserva catálogo y declara fallo
+OK sin videos conserva catálogo y declara fallo
+OK Sin token no consulta ni altera
+OK Cuota agotada no acusa propiedad
+OK Resultado parcial preserva datos válidos
+OK Actualiza solo filas devueltas
+OK Indicador exige ambas credenciales
+11 pruebas correctas. Servicios simulados.
+
+verificar_html_piloto.cjs
+OK Clave oculta y recordar desactivado inicialmente
+OK Viewport móvil sin bloquear zoom
+OK Parámetros mal codificados no rompen navegación
+OK Valores con igual se conservan y claves peligrosas se ignoran
+OK Búsqueda inicial sin IA y modo semántico persiste en enlace
+OK Supervisor solo recibe su enlace de resultados en menú personal
+OK Administrador conserva todos sus enlaces
+OK Una sola vigilancia de caducidad tras renovar
+OK Cierre purga examen favoritos vistas y temporizadores
+OK Respuesta de sesión anterior no expone datos a la nueva
+OK Un 401 tardío no expulsa a la sesión nueva
+OK Timeout advierte resultado incierto sin recomendar repetir escritura
+OK Logout cierra local inmediatamente y reconoce fallo remoto
+OK Logout confirmado no exige mantener la sesión local
+OK Logout tardío no tapa el acceso de otra persona
+OK Catálogo elige ruta palabras
+OK Catálogo elige ruta semantica
+OK Notas diferidas pertenecen a su sesión y cancelan su temporizador
+18 pruebas de interfaz aprobadas; navegador y servidor simulados.
+
+verificar_panel_piloto.cjs
+OK Fila de ejemplo usa 32 columnas sin inventar duración o métricas
+OK Cancelar ejemplo no modifica el libro
+OK URL inválida no inserta fila
+OK Indicador Twitch exige las dos credenciales almacenadas
+OK Etiqueta de prompts no promete una llamada al proveedor
+OK Renovación distingue vigencia y rotación
+6 pruebas del panel y fila de ensayo aprobadas; servicios simulados.
+
+verificar_r4.cjs
+OK Números completos finitos; rechaza sufijos, infinitos y objetos
+OK Reserva excluye consumidor simultáneo y libera lock corto
+OK Liberación ajena no borra reserva y la propia sí
+OK Reserva caducada permite recuperar consumidor
+OK Marca antes del efecto y confirma cada fila antes de la siguiente
+OK No repite completadas ni interrumpidas EN_PROCESO
+OK Consumidor ocupado no ejecuta tareas
+OK Dos respuestas viajan en orden y la primera no confirma la segunda
+OK exito false no se presenta como guardado y bloquea nuevos avances
+OK Respuesta tardía no altera otra sesión
+OK Guardado tardío rechaza intento entregado y libera lock
+OK Guardado ajeno se rechaza sin dejar bloqueo tomado
+OK Error de tarea se confirma pendiente con retroceso
+OK Purga no mueve filas de consumidor activo
+OK Fallo de red conserva respuesta local para entrega
+15 pruebas R4 aprobadas. Sintaxis completa válida.
+
+verificar_r5.cjs
+OK Append coloca plataforma en Fuente y deja taxonomía por clasificar
+OK Append Vimeo conserva ID y respuesta de plataforma
+OK Append no reconocido no inventa clasificación ni plataforma
+OK Append mantiene rechazo de permisos sin insertar
+OK Append conserva límite de peticiones
+OK Apertura guarda identidad e ID sin modificar métricas externas
+OK Fallo del historial se comunica y no inventa registro
+7 pruebas R5 aprobadas. Servicios simulados.
+

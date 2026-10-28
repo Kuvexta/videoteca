@@ -1,0 +1,28 @@
+{
+  "libro": {
+    "valor": "1d3H1ZngdEKAacqYG2Ya3W6geY_UrWWThIuwA5Itc57I",
+    "ok": true
+  },
+  "fecha": "2026-09-12T00:50:49.391Z",
+  "obtenerUi": {
+    "valor": true,
+    "ok": true
+  },
+  "alerta": {
+    "error": "You do not have access to perform that action. Please ask the owner of this item to grant access to you.",
+    "ok": false
+  },
+  "activadores": {
+    "valor": [],
+    "ok": true
+  },
+  "usuarioEfectivo": {
+    "valor": "sstconsultorescolombia@gmail.com",
+    "ok": true
+  },
+  "proyecto": "1pv0v0_r60zn8rLc614fewTK6qS7BPYgNpr0d5LMvSmIAU_fC4YUEN4tZ",
+  "usuarioActivo": {
+    "valor": "sstconsultorescolombia@gmail.com",
+    "ok": true
+  }
+}
