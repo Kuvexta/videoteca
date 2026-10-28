@@ -45,4 +45,4 @@ Sigue **`MANUAL_INSTALACION.md`** (10 pasos, desde cero hasta respaldo y aceptac
 
 ## Licencia
 
-Por definir por el propietario (se recomienda MIT para una comunidad pública).
+**MIT** © 2026 Kuvexta — ver `LICENSE`. Uso libre para la comunidad.
